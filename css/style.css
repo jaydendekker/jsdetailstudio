@@ -588,8 +588,93 @@ ul { list-style: none; }
 @media (min-height: 561px) {
   html.snap { scroll-snap-type: y mandatory; scroll-padding-top: 0; }
   html.snap .hero,
+  html.snap .reviews,
   html.snap .chapter { scroll-snap-align: start; scroll-snap-stop: always; }
 }
+
+/* ---------- Reviews (Google) ---------- */
+.reviews {
+  min-height: 100vh;
+  min-height: 100svh;
+  background: var(--bg-tint);
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 0;
+}
+.reviews__head { text-align: center; margin-bottom: clamp(2.2rem, 5vw, 3.6rem); }
+.reviews__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.3rem;
+}
+.reviews__badge svg { width: 1.15rem; height: 1.15rem; }
+.reviews__score {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+.reviews__score-num {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.6rem, 6vw, 3.8rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.stars { color: #ffc21a; letter-spacing: 0.1em; font-size: 1.15rem; }
+.reviews__count { color: var(--muted); font-size: 0.98rem; }
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
+  gap: 1.2rem;
+  align-items: start;
+  max-width: 860px;
+  margin-inline: auto;
+  width: 100%;
+}
+.review-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: clamp(1.5rem, 3vw, 2.1rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.review-card__stars { color: #ffc21a; font-size: 1.05rem; letter-spacing: 0.08em; }
+.review-card__text { color: var(--text); line-height: 1.65; }
+.review-card__author {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+.review-card__avatar {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #fff;
+  flex: none;
+}
+.review-card__name { font-family: var(--font-display); font-weight: 500; font-size: 0.98rem; }
+.review-card__meta { color: var(--muted); font-size: 0.82rem; }
+.reviews__more { text-align: center; margin-top: clamp(1.8rem, 4vw, 2.6rem); }
 .chapter {
   min-height: 100vh;
   min-height: 100svh;

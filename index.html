@@ -38,7 +38,7 @@
   <link rel="preload" href="assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/video/hero-studio-detailing-poster.jpg" as="image" fetchpriority="high">
-  <link rel="stylesheet" href="css/style.css?v=8">
+  <link rel="stylesheet" href="css/style.css?v=9">
 
   <!-- Structured data: LocalBusiness / AutoRepair -->
   <script type="application/ld+json">
@@ -125,9 +125,61 @@
       </div>
     </div>
 
-    <a class="hero__scroll" href="#diensten" aria-label="Scroll naar beneden">
+    <a class="hero__scroll" href="#reviews" aria-label="Scroll naar beneden">
       <span class="hero__scroll-line" aria-hidden="true"></span>
     </a>
+  </section>
+
+  <!-- ===== REVIEWS (Google) ===== -->
+  <section class="reviews" id="reviews" aria-labelledby="reviews-title">
+    <div class="container">
+      <header class="reviews__head">
+        <p class="reviews__badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+          </svg>
+          Reviews op Google
+        </p>
+        <h2 class="reviews__score" id="reviews-title">
+          <span class="reviews__score-num">5,0</span>
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span class="reviews__count">uit 24 reviews</span>
+        </h2>
+      </header>
+
+      <div class="reviews__grid">
+        <figure class="review-card reveal">
+          <p class="review-card__stars" aria-label="5 van 5 sterren">★★★★★</p>
+          <blockquote class="review-card__text">Echt super tevreden! Mijn auto is van binnen en buiten perfect schoongemaakt en mooi gepolijst. Ook het cabriodak, dat echt heel vies was, is weer helemaal schoon geworden. Je ziet dat er met aandacht gewerkt wordt. Daarnaast ook erg vriendelijk en professioneel. Zeker een aanrader!</blockquote>
+          <figcaption class="review-card__author">
+            <span class="review-card__avatar" style="background:#7e5a4f" aria-hidden="true">L</span>
+            <span>
+              <span class="review-card__name">Lynn Steijger</span><br>
+              <span class="review-card__meta">Google-review</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="review-card reveal">
+          <p class="review-card__stars" aria-label="5 van 5 sterren">★★★★★</p>
+          <blockquote class="review-card__text">Waterscooter in de glascoating laten zetten. Super aardige gast die zijn afspraken nakomt. Resultaat is verbluffend mooi — het water loopt er razendsnel af.</blockquote>
+          <figcaption class="review-card__author">
+            <span class="review-card__avatar" style="background:#c2185b" aria-hidden="true">J</span>
+            <span>
+              <span class="review-card__name">John van Egmond</span><br>
+              <span class="review-card__meta">Google-review</span>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <p class="reviews__more">
+        <a class="link link--big" href="https://www.google.com/search?kgmid=/g/11nb7r6nzc" target="_blank" rel="noopener">Lees alle reviews op Google <span aria-hidden="true">&rarr;</span></a>
+      </p>
+    </div>
   </section>
 
   <!-- ===== HOOFDSTUK 01: DIENSTEN ===== -->
@@ -187,11 +239,11 @@
   <!-- ===== HOOFDSTUK 04: CONTACT ===== -->
   <section class="chapter chapter--media chapter--contact" id="contact">
     <picture class="chapter__bg" aria-hidden="true">
-      <source type="image/webp" srcset="assets/img/audi-rs6-480.webp 480w, assets/img/audi-rs6-800.webp 800w, assets/img/audi-rs6-1200.webp 1200w, assets/img/audi-rs6-1600.webp 1600w" sizes="100vw">
-      <img src="assets/img/audi-rs6-800.jpg" alt="" width="1600" height="1200" loading="lazy" decoding="async" style="object-position: 52% 46%">
+      <source type="image/webp" srcset="assets/img/landrover-defender-480.webp 480w, assets/img/landrover-defender-800.webp 800w, assets/img/landrover-defender-1200.webp 1200w, assets/img/landrover-defender-1600.webp 1600w" sizes="100vw">
+      <img src="assets/img/landrover-defender-800.jpg" alt="" width="1206" height="1718" loading="lazy" decoding="async">
     </picture>
     <div class="chapter__shade" aria-hidden="true"></div>
-    <span class="chapter__carlabel" aria-hidden="true">Audi RS6 Avant</span>
+    <span class="chapter__carlabel" aria-hidden="true">Land Rover Defender</span>
     <a class="chapter__link" href="contact/">
       <span class="chapter__nr">04</span>
       <h2 class="chapter__title">Contact</h2>
@@ -219,6 +271,6 @@
 
 </main>
 
-<script src="js/main.js?v=8" defer></script>
+<script src="js/main.js?v=9" defer></script>
 </body>
 </html>
