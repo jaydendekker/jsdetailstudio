@@ -617,6 +617,15 @@ ul { list-style: none; }
   transition: transform 1.4s var(--ease);
 }
 .chapter:hover .chapter__bg img { transform: scale(1.03); }
+/* Panelen met een LIGGENDE foto (bv. Ferrari): op een staand scherm zou cover
+   de zijkanten wegsnijden. Toon de hele auto bovenin, tekst eronder. */
+@media (orientation: portrait) {
+  .chapter--contain .chapter__bg img {
+    object-fit: contain;
+    object-position: center 20%;
+  }
+  .chapter--contain .chapter__link { justify-content: flex-end; }
+}
 /* Lichtere waas: donker onderaan (tekst leesbaar), open in het midden zodat
    de auto duidelijk zichtbaar blijft, subtiel donker bovenaan voor de header. */
 .chapter__shade {
