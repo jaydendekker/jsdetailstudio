@@ -619,29 +619,9 @@ ul { list-style: none; }
 .chapter:hover .chapter__bg img { transform: scale(1.03); }
 /* Panelen met een LIGGENDE foto (bv. Ferrari): op een staand scherm zou cover
    de zijkanten wegsnijden. Toon de hele auto bovenin, tekst eronder. */
-@media (orientation: portrait) {
-  .chapter--contain {
-    display: flex;
-    flex-direction: column;
-  }
-  /* Foto krijgt een eigen kader met de verhouding van de foto zelf: de hele
-     auto past er precies in, zonder losse zwarte balk eronder. */
-  .chapter--contain .chapter__bg {
-    position: relative;
-    inset: auto;
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    flex: none;
-  }
-  .chapter--contain .chapter__bg img { object-fit: cover; object-position: center; }
-  .chapter--contain .chapter__shade { display: none; }
-  .chapter--contain .chapter__carlabel { top: 4.8rem; }
-  .chapter--contain .chapter__link {
-    flex: 1 1 auto;
-    justify-content: flex-start;
-    padding: 2.8rem 0 3rem;
-  }
-}
+/* Liggende foto (Ferrari) schermvullend: toon de flank/cabine i.p.v. alleen de
+   neus door de uitsnede naar links te schuiven. */
+.chapter--wide .chapter__bg img { object-position: 38% 46%; }
 /* Lichtere waas: donker onderaan (tekst leesbaar), open in het midden zodat
    de auto duidelijk zichtbaar blijft, subtiel donker bovenaan voor de header. */
 .chapter__shade {
