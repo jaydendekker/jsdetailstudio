@@ -115,7 +115,9 @@ ul { list-style: none; }
 /* ---------- Header ---------- */
 .site-header {
   position: fixed;
-  inset: 0 0 auto 0;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 50;
   padding: 0.9rem 0;
   transition: background 0.35s, box-shadow 0.35s, padding 0.35s;
@@ -152,6 +154,7 @@ ul { list-style: none; }
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
+  min-height: 100vh;
   min-height: 100svh;
   display: grid;
   place-items: center;
@@ -160,7 +163,10 @@ ul { list-style: none; }
 }
 .hero__video {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -169,7 +175,10 @@ ul { list-style: none; }
 }
 .hero__shade {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: -1;
   background:
     radial-gradient(ellipse at 50% 42%, rgba(10, 10, 11, 0.18) 0%, rgba(10, 10, 11, 0.66) 78%),
@@ -179,7 +188,10 @@ ul { list-style: none; }
 .hero__shade::after {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   opacity: 0.05;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
 }
@@ -370,7 +382,10 @@ ul { list-style: none; }
 }
 .band__video {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -379,7 +394,10 @@ ul { list-style: none; }
 }
 .band__shade {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: -1;
   background: linear-gradient(to bottom, var(--bg) 0%, rgba(10,10,11,0.55) 22%, rgba(10,10,11,0.55) 78%, var(--bg) 100%);
 }
@@ -427,7 +445,9 @@ ul { list-style: none; }
 .gallery__item:hover img { transform: scale(1.035); }
 .gallery__item figcaption {
   position: absolute;
-  inset: auto 0 0 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   padding: 2.6rem 1.1rem 0.95rem;
   font-size: 0.88rem;
   letter-spacing: 0.02em;
@@ -540,7 +560,10 @@ ul { list-style: none; }
   .menu-toggle[aria-expanded="true"] span:nth-child(2) { transform: translateY(-4.5px) rotate(-45deg); }
   .nav {
     position: fixed;
-    inset: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     flex-direction: column;
     justify-content: center;
     gap: 2.2rem;
@@ -568,6 +591,7 @@ ul { list-style: none; }
   html.snap .chapter { scroll-snap-align: start; scroll-snap-stop: always; }
 }
 .chapter {
+  min-height: 100vh;
   min-height: 100svh;
   position: relative;
   border-top: 1px solid var(--line);
@@ -578,7 +602,10 @@ ul { list-style: none; }
 .chapter__bg,
 .chapter__bgvideo {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: -2;
 }
 .chapter__bg img,
@@ -592,7 +619,10 @@ ul { list-style: none; }
 .chapter:hover .chapter__bg img { transform: scale(1.045); }
 .chapter__shade {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: -1;
   background:
     linear-gradient(108deg, rgba(10, 10, 11, 0.92) 8%, rgba(10, 10, 11, 0.6) 52%, rgba(10, 10, 11, 0.3) 100%),
