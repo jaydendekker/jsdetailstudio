@@ -36,6 +36,36 @@
     });
   }
 
+  /* ----- Ankerlinks op de snap-homepage -----
+     Mandatory scroll-snap annuleert soepele ankerscrolls in Chrome/Safari;
+     daarom: snap tijdelijk uit, scrollen, en na afloop weer aan. */
+  var snapRoot = document.documentElement;
+  var usesSnap = snapRoot.classList.contains("snap");
+  var snapScrollTo = function (el) {
+    // met mandatory snap actief werkt alleen een instant jump betrouwbaar
+    el.scrollIntoView({ behavior: reducedMotion ? "auto" : usesSnap ? "instant" : "smooth" });
+  };
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if (!a) return;
+    var target = document.getElementById(a.getAttribute("href").slice(1));
+    if (!target) return;
+    e.preventDefault();
+    if (history.pushState) history.pushState(null, "", a.getAttribute("href"));
+    snapScrollTo(target);
+  });
+  var jumpToHash = function () {
+    var t = location.hash && document.getElementById(location.hash.slice(1));
+    if (t) snapScrollTo(t);
+  };
+  if (usesSnap && location.hash) {
+    jumpToHash();
+    // Chrome herstelt de scrollpositie nogmaals ná load; daarna opnieuw springen
+    window.addEventListener("load", function () {
+      requestAnimationFrame(jumpToHash);
+    });
+  }
+
   /* ----- Fade-in bij scrollen ----- */
   var revealEls = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
   if ("IntersectionObserver" in window && !reducedMotion) {

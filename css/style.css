@@ -561,6 +561,83 @@ ul { list-style: none; }
   .br-desktop { display: none; }
 }
 
+/* ---------- Snap-scroll homepage (hoofdstukken) ---------- */
+@media (min-height: 561px) {
+  html.snap { scroll-snap-type: y mandatory; scroll-padding-top: 0; }
+  html.snap .hero,
+  html.snap .chapter { scroll-snap-align: start; scroll-snap-stop: always; }
+}
+.chapter {
+  min-height: 100svh;
+  position: relative;
+  border-top: 1px solid var(--line);
+  display: grid;
+}
+.chapter__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.1rem;
+  width: min(var(--container), 100% - 2 * var(--gutter));
+  margin-inline: auto;
+  padding: 6rem 0;
+}
+.chapter__nr {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.25em;
+  color: var(--accent-bright);
+}
+.chapter__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(3.4rem, 13vw, 8.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  transition: color 0.35s var(--ease);
+}
+.chapter__teaser { color: var(--muted); max-width: 44ch; font-size: clamp(1rem, 1.6vw, 1.15rem); }
+.chapter__cta {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+  color: var(--text);
+}
+.chapter__cta svg { width: 1.4em; height: 1.4em; transition: translate 0.3s var(--ease); }
+.chapter__link:hover .chapter__title { color: var(--accent-bright); }
+.chapter__link:hover .chapter__cta svg { translate: 6px 0; }
+.chapter--contact .chapter__link { padding-bottom: 2rem; }
+.contact-quick { display: flex; flex-wrap: wrap; gap: 0.9rem; align-items: center; margin-top: 1rem; }
+.contact-quick__tel { color: var(--muted); font-size: 0.98rem; }
+.contact-quick__tel:hover { color: var(--accent-bright); }
+.chapter--contact { display: flex; flex-direction: column; }
+.chapter--contact .chapter__link { margin-top: auto; }
+.footer--inpanel { margin-top: auto; padding: 1.6rem 0; }
+.footer--inpanel .footer__meta { margin-top: 0; }
+
+/* ---------- Subpagina's ---------- */
+.page-hero { padding: clamp(7.5rem, 16vh, 11rem) 0 0; }
+.page-hero .section__intro { margin-bottom: 0; }
+.nav a.is-active:not(.btn) { color: #fff; }
+.breadcrumb {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.4rem;
+}
+.breadcrumb a:hover { color: var(--accent-bright); }
+
 /* ---------- Toegankelijkheid: minder beweging ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
