@@ -1,0 +1,13 @@
+{
+  "name": "JS Detail Studio",
+  "short_name": "JS Detail",
+  "description": "Premium auto detailing in IJmuiden — polijsten, keramische coating, interieur & exterieur detailing.",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#0a0a0b",
+  "theme_color": "#0a0a0b",
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
