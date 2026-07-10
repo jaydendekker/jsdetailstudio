@@ -28,7 +28,7 @@
 
   <link rel="preload" href="../assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../css/style.css?v=10">
+  <link rel="stylesheet" href="../css/style.css?v=11">
 
   <script type="application/ld+json">
   {
@@ -65,11 +65,12 @@
       <span class="brand__name">JS&nbsp;Detail&nbsp;Studio</span>
     </a>
     <nav class="nav" id="nav" aria-label="Hoofdmenu">
-      <a href="./" class="is-active" aria-current="page">Diensten</a>
-      <a href="../projecten/">Projecten</a>
-      <a href="../over-ons/">Over ons</a>
+      <a href="./" class="is-active" aria-current="page" data-en="Services">Diensten</a>
+      <a href="../projecten/" data-en="Projects">Projecten</a>
+      <a href="../over-ons/" data-en="About">Over ons</a>
       <a href="../contact/" class="btn btn--small btn--primary nav__cta">Contact</a>
     </nav>
+    <button class="lang-toggle" type="button" aria-label="Switch to English">EN</button>
     <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav" aria-label="Menu openen">
       <span></span><span></span>
     </button>
@@ -79,11 +80,11 @@
 <main>
   <section class="section page-hero">
     <div class="container">
-      <nav class="breadcrumb" aria-label="Kruimelpad"><a href="../">Home</a><span aria-hidden="true">/</span><span>Diensten</span></nav>
+      <nav class="breadcrumb" aria-label="Kruimelpad"><a href="../" data-en="Home">Home</a><span aria-hidden="true">/</span><span data-en="Services">Diensten</span></nav>
       <header class="section__head">
-        <p class="eyebrow">01 &middot; Diensten</p>
-        <h1 class="section__title">Onze pakketten</h1>
-        <p class="section__intro">Elke behandeling wordt afgestemd op de staat en de lak van jouw auto. Alle prijzen op aanvraag — stuur een appje voor een vrijblijvende inschatting. <!-- TODO: placeholder-tekst, later invullen --></p>
+        <p class="eyebrow" data-en="01 &middot; Services">01 &middot; Diensten</p>
+        <h1 class="section__title" data-en="Our packages">Onze pakketten</h1>
+        <p class="section__intro" data-en="Every treatment is tailored to the condition and paint of your car. All prices on request — send a message for a no-obligation quote.">Elke behandeling wordt afgestemd op de staat en de lak van jouw auto. Alle prijzen op aanvraag — stuur een appje voor een vrijblijvende inschatting.</p>
       </header>
     </div>
   </section>
@@ -93,36 +94,36 @@
       <div class="services">
         <article class="service reveal">
           <span class="service__nr">01</span>
-          <h2 class="service__title">Interieur detailing</h2>
-          <p class="service__text">Dieptereiniging van bekleding, leer en kunststoffen — tot in de kleinste naden. Het interieur ruikt en voelt weer als nieuw.</p>
-          <a class="service__price" href="../contact/">Prijs op aanvraag <span aria-hidden="true">&rarr;</span></a>
+          <h2 class="service__title" data-en="Interior detailing">Interieur detailing</h2>
+          <p class="service__text" data-en="Deep cleaning of upholstery, leather and plastics — down to the smallest seams. The interior looks and smells like new again.">Dieptereiniging van bekleding, leer en kunststoffen — tot in de kleinste naden. Het interieur ruikt en voelt weer als nieuw.</p>
+          <a class="service__price" href="../contact/"><span data-en="Price on request">Prijs op aanvraag</span> <span aria-hidden="true">&rarr;</span></a>
         </article>
         <article class="service reveal">
           <span class="service__nr">02</span>
-          <h2 class="service__title">Exterieur detailing</h2>
-          <p class="service__text">Grondige handwas, decontaminatie en bescherming. Een diepe, strakke glans zonder wasstraatkrassen.</p>
-          <a class="service__price" href="../contact/">Prijs op aanvraag <span aria-hidden="true">&rarr;</span></a>
+          <h2 class="service__title" data-en="Exterior detailing">Exterieur detailing</h2>
+          <p class="service__text" data-en="Thorough hand wash, decontamination and protection. A deep, sharp shine without wash-street scratches.">Grondige handwas, decontaminatie en bescherming. Een diepe, strakke glans zonder wasstraatkrassen.</p>
+          <a class="service__price" href="../contact/"><span data-en="Price on request">Prijs op aanvraag</span> <span aria-hidden="true">&rarr;</span></a>
         </article>
         <article class="service reveal">
           <span class="service__nr">03</span>
-          <h2 class="service__title">Machinaal polijsten</h2>
-          <p class="service__text">Krassen, swirls en hologrammen verwijderen we in meerdere stappen. Het resultaat: een echte showroom-finish.</p>
-          <a class="service__price" href="../contact/">Prijs op aanvraag <span aria-hidden="true">&rarr;</span></a>
+          <h2 class="service__title" data-en="Machine polishing">Machinaal polijsten</h2>
+          <p class="service__text" data-en="We remove scratches, swirls and holograms in several stages. The result: a true showroom finish.">Krassen, swirls en hologrammen verwijderen we in meerdere stappen. Het resultaat: een echte showroom-finish.</p>
+          <a class="service__price" href="../contact/"><span data-en="Price on request">Prijs op aanvraag</span> <span aria-hidden="true">&rarr;</span></a>
         </article>
         <article class="service reveal">
           <span class="service__nr">04</span>
-          <h2 class="service__title">Keramische coating</h2>
-          <p class="service__text">Jarenlange bescherming en diepglans met een professionele keramische coating, aangebracht in een stofvrije studio.</p>
-          <a class="service__price" href="../contact/">Prijs op aanvraag <span aria-hidden="true">&rarr;</span></a>
+          <h2 class="service__title" data-en="Ceramic coating">Keramische coating</h2>
+          <p class="service__text" data-en="Years of protection and deep gloss with a professional ceramic coating, applied in a dust-free studio.">Jarenlange bescherming en diepglans met een professionele keramische coating, aangebracht in een stofvrije studio.</p>
+          <a class="service__price" href="../contact/"><span data-en="Price on request">Prijs op aanvraag</span> <span aria-hidden="true">&rarr;</span></a>
         </article>
       </div>
 
       <div class="extras reveal">
-        <p class="extras__label">Ook mogelijk</p>
+        <p class="extras__label" data-en="Also possible">Ook mogelijk</p>
         <ul class="extras__list">
-          <li>Velgen &amp; remklauwen</li>
-          <li>Glascoating &amp; ruiten</li>
-          <li>Boot &amp; jetski detailing</li>
+          <li data-en="Wheels &amp; calipers">Velgen &amp; remklauwen</li>
+          <li data-en="Glass coating &amp; windows">Glascoating &amp; ruiten</li>
+          <li data-en="Boat &amp; jet ski detailing">Boot &amp; jetski detailing</li>
         </ul>
       </div>
     </div>
@@ -136,8 +137,8 @@
     </video>
     <div class="band__shade band__shade--deep" aria-hidden="true"></div>
     <div class="band__content container reveal">
-      <h2 class="band__title">Weten wat jouw auto nodig heeft?</h2>
-      <p class="band__sub">Stuur een foto via WhatsApp — je krijgt snel een eerlijk advies.</p>
+      <h2 class="band__title" data-en="Wondering what your car needs?">Weten wat jouw auto nodig heeft?</h2>
+      <p class="band__sub" data-en="Send a photo via WhatsApp — you'll get honest advice fast.">Stuur een foto via WhatsApp — je krijgt snel een eerlijk advies.</p>
       <div class="hero__actions">
         <a class="btn btn--primary" href="https://wa.me/31637583231?text=Hoi%20JS%20Detail%20Studio%2C%20ik%20wil%20graag%20een%20afspraak%20maken." target="_blank" rel="noopener">WhatsApp</a>
         <a class="btn btn--ghost" href="../contact/">Contact</a>
@@ -150,9 +151,9 @@
   <div class="container footer__inner">
     <img src="../assets/img/logo-circle-96.webp" alt="Logo van JS Detail Studio" width="56" height="56" loading="lazy" class="footer__logo">
     <nav class="footer__nav" aria-label="Footer">
-      <a href="./">Diensten</a>
-      <a href="../projecten/">Projecten</a>
-      <a href="../over-ons/">Over ons</a>
+      <a href="./" data-en="Services">Diensten</a>
+      <a href="../projecten/" data-en="Projects">Projecten</a>
+      <a href="../over-ons/" data-en="About">Over ons</a>
       <a href="../contact/">Contact</a>
     </nav>
     <div class="footer__social">
@@ -167,6 +168,6 @@
   </div>
 </footer>
 
-<script src="../js/main.js?v=10" defer></script>
+<script src="../js/main.js?v=11" defer></script>
 </body>
 </html>

@@ -129,8 +129,24 @@ ul { list-style: none; }
   box-shadow: 0 1px 0 var(--line);
   padding: 0.55rem 0;
 }
-.header__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-.brand { display: inline-flex; align-items: center; gap: 0.7rem; z-index: 60; position: relative; }
+.header__inner { display: flex; align-items: center; gap: 0.75rem; }
+.brand { display: inline-flex; align-items: center; gap: 0.7rem; z-index: 60; position: relative; margin-right: auto; }
+.lang-toggle {
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  padding: 0.42rem 0.85rem;
+  cursor: pointer;
+  z-index: 60;
+  position: relative;
+  transition: color 0.25s, border-color 0.25s;
+}
+.lang-toggle:hover { color: #fff; border-color: var(--accent); }
 .brand__mark { border-radius: 50%; }
 .brand__name {
   font-family: var(--font-display);

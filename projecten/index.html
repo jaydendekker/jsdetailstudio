@@ -28,7 +28,7 @@
 
   <link rel="preload" href="../assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../css/style.css?v=10">
+  <link rel="stylesheet" href="../css/style.css?v=11">
 
   <script type="application/ld+json">
   {
@@ -55,11 +55,12 @@
       <span class="brand__name">JS&nbsp;Detail&nbsp;Studio</span>
     </a>
     <nav class="nav" id="nav" aria-label="Hoofdmenu">
-      <a href="../diensten/">Diensten</a>
-      <a href="./" class="is-active" aria-current="page">Projecten</a>
-      <a href="../over-ons/">Over ons</a>
+      <a href="../diensten/" data-en="Services">Diensten</a>
+      <a href="./" class="is-active" aria-current="page" data-en="Projects">Projecten</a>
+      <a href="../over-ons/" data-en="About">Over ons</a>
       <a href="../contact/" class="btn btn--small btn--primary nav__cta">Contact</a>
     </nav>
+    <button class="lang-toggle" type="button" aria-label="Switch to English">EN</button>
     <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav" aria-label="Menu openen">
       <span></span><span></span>
     </button>
@@ -69,11 +70,11 @@
 <main>
   <section class="section page-hero">
     <div class="container">
-      <nav class="breadcrumb" aria-label="Kruimelpad"><a href="../">Home</a><span aria-hidden="true">/</span><span>Projecten</span></nav>
+      <nav class="breadcrumb" aria-label="Kruimelpad"><a href="../" data-en="Home">Home</a><span aria-hidden="true">/</span><span data-en="Projects">Projecten</span></nav>
       <header class="section__head">
         <p class="eyebrow">02 &middot; Portfolio</p>
-        <h1 class="section__title">Projecten</h1>
-        <p class="section__intro">Een selectie detailing-projecten uit de studio: polijsten, keramische coating en interieur detailing. Meer resultaten en video&rsquo;s zie je op <a class="link" href="https://www.instagram.com/jsdetailstudio/" target="_blank" rel="noopener">Instagram</a>.</p>
+        <h1 class="section__title" data-en="Projects">Projecten</h1>
+        <p class="section__intro" data-en='A selection of detailing projects from the studio: polishing, ceramic coating and interior detailing. See more results and videos on <a class="link" href="https://www.instagram.com/jsdetailstudio/" target="_blank" rel="noopener">Instagram</a>.'>Een selectie detailing-projecten uit de studio: polijsten, keramische coating en interieur detailing. Meer resultaten en video&rsquo;s zie je op <a class="link" href="https://www.instagram.com/jsdetailstudio/" target="_blank" rel="noopener">Instagram</a>.</p>
       </header>
     </div>
   </section>
@@ -86,7 +87,7 @@
             <source type="image/webp" srcset="../assets/img/mercedes-slr-480.webp 480w, ../assets/img/mercedes-slr-800.webp 800w, ../assets/img/mercedes-slr-1200.webp 1200w" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 46vw, 94vw">
             <img src="../assets/img/mercedes-slr-800.jpg" alt="Zilvergrijze Mercedes-Benz SLR McLaren roadster met hoogglans lak na detailing bij JS Detail Studio in IJmuiden" width="3840" height="5120" loading="lazy" decoding="async">
           </picture>
-          <figcaption>Mercedes SLR McLaren — polijsten &amp; coating</figcaption>
+          <figcaption data-en="Mercedes SLR McLaren — polishing &amp; coating">Mercedes SLR McLaren — polijsten &amp; coating</figcaption>
         </figure>
 
         <figure class="gallery__item reveal">
@@ -94,7 +95,7 @@
             <source type="image/webp" srcset="../assets/img/bentley-gtc-480.webp 480w, ../assets/img/bentley-gtc-800.webp 800w, ../assets/img/bentley-gtc-1090.webp 1090w" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 46vw, 94vw">
             <img src="../assets/img/bentley-gtc-800.jpg" alt="Zilvergrijze Bentley Continental GT Convertible na exterieur detailing bij JS Detail Studio in IJmuiden" width="1090" height="1600" loading="lazy" decoding="async">
           </picture>
-          <figcaption>Bentley Continental GT Convertible — exterieur detailing</figcaption>
+          <figcaption data-en="Bentley Continental GT Convertible — exterior detailing">Bentley Continental GT Convertible — exterieur detailing</figcaption>
         </figure>
 
         <figure class="gallery__item reveal">
@@ -102,7 +103,7 @@
             <source type="image/webp" srcset="../assets/img/landrover-defender-480.webp 480w, ../assets/img/landrover-defender-800.webp 800w, ../assets/img/landrover-defender-1200.webp 1200w" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 46vw, 94vw">
             <img src="../assets/img/landrover-defender-800.jpg" alt="Groene Land Rover Defender met bronzen velgen na exterieur detailing bij JS Detail Studio in IJmuiden" width="1206" height="1718" loading="lazy" decoding="async">
           </picture>
-          <figcaption>Land Rover Defender — exterieur detailing</figcaption>
+          <figcaption data-en="Land Rover Defender — exterior detailing">Land Rover Defender — exterieur detailing</figcaption>
         </figure>
 
         <figure class="gallery__item reveal">
@@ -110,7 +111,7 @@
             <source type="image/webp" srcset="../assets/img/ferrari-portofino-480.webp 480w, ../assets/img/ferrari-portofino-800.webp 800w, ../assets/img/ferrari-portofino-1200.webp 1200w, ../assets/img/ferrari-portofino-1600.webp 1600w" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 46vw, 94vw">
             <img src="../assets/img/ferrari-portofino-800.jpg" alt="Rode Ferrari Portofino na volledige exterieur detailing in de studio van JS Detail Studio in IJmuiden" width="1600" height="1200" loading="lazy" decoding="async">
           </picture>
-          <figcaption>Ferrari Portofino — exterieur detailing</figcaption>
+          <figcaption data-en="Ferrari Portofino — exterior detailing">Ferrari Portofino — exterieur detailing</figcaption>
         </figure>
 
         <figure class="gallery__item reveal">
@@ -118,7 +119,7 @@
             <source type="image/webp" srcset="../assets/img/audi-rs6-480.webp 480w, ../assets/img/audi-rs6-800.webp 800w, ../assets/img/audi-rs6-1200.webp 1200w, ../assets/img/audi-rs6-1600.webp 1600w" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 46vw, 94vw">
             <img src="../assets/img/audi-rs6-800.jpg" alt="Blauwe Audi RS6 Avant met diepe lakglans na machinaal polijsten bij JS Detail Studio in IJmuiden" width="1600" height="1200" loading="lazy" decoding="async">
           </picture>
-          <figcaption>Audi RS6 Avant — polijsten &amp; coating</figcaption>
+          <figcaption data-en="Audi RS6 Avant — polishing &amp; coating">Audi RS6 Avant — polijsten &amp; coating</figcaption>
         </figure>
 
         <figure class="gallery__item reveal">
@@ -126,7 +127,7 @@
             <source type="image/webp" srcset="../assets/img/bentley-interieur-480.webp 480w, ../assets/img/bentley-interieur-800.webp 800w, ../assets/img/bentley-interieur-1152.webp 1152w" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 46vw, 94vw">
             <img src="../assets/img/bentley-interieur-800.jpg" alt="Interieur van een Bentley Continental GT met leer en houtafwerking na interieur detailing" width="1152" height="2048" loading="lazy" decoding="async">
           </picture>
-          <figcaption>Bentley Continental GT — interieur detailing</figcaption>
+          <figcaption data-en="Bentley Continental GT — interior detailing">Bentley Continental GT — interieur detailing</figcaption>
         </figure>
 
         <figure class="gallery__item reveal">
@@ -134,7 +135,7 @@
             <source type="image/webp" srcset="../assets/img/jaguar-ftype-480.webp 480w, ../assets/img/jaguar-ftype-800.webp 800w" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 46vw, 94vw">
             <img src="../assets/img/jaguar-ftype-800.jpg" alt="Zwarte Jaguar F-Type met hoogglans lak na exterieur detailing bij JS Detail Studio in IJmuiden" width="464" height="832" loading="lazy" decoding="async">
           </picture>
-          <figcaption>Jaguar F-Type — exterieur detailing</figcaption>
+          <figcaption data-en="Jaguar F-Type — exterior detailing">Jaguar F-Type — exterieur detailing</figcaption>
         </figure>
 
         <figure class="gallery__item reveal">
@@ -142,7 +143,7 @@
             <source type="image/webp" srcset="../assets/img/audi-rs-velgen-480.webp 480w, ../assets/img/audi-rs-velgen-800.webp 800w, ../assets/img/audi-rs-velgen-1200.webp 1200w" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 46vw, 94vw">
             <img src="../assets/img/audi-rs-velgen-800.jpg" alt="Audi RS velg met blauwe remklauw na velgenreiniging en detailing" width="1200" height="1600" loading="lazy" decoding="async">
           </picture>
-          <figcaption>Audi RS — velgen &amp; details</figcaption>
+          <figcaption data-en="Audi RS — wheels &amp; details">Audi RS — velgen &amp; details</figcaption>
         </figure>
 
         <figure class="gallery__item reveal">
@@ -150,7 +151,7 @@
             <source type="image/webp" srcset="../assets/img/porsche-cayenne-480.webp 480w, ../assets/img/porsche-cayenne-800.webp 800w, ../assets/img/porsche-cayenne-1200.webp 1200w" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 46vw, 94vw">
             <img src="../assets/img/porsche-cayenne-800.jpg" alt="Donkerblauwe Porsche Cayenne met hoogglans lak na exterieur detailing" width="1200" height="1600" loading="lazy" decoding="async">
           </picture>
-          <figcaption>Porsche Cayenne — exterieur detailing</figcaption>
+          <figcaption data-en="Porsche Cayenne — exterior detailing">Porsche Cayenne — exterieur detailing</figcaption>
         </figure>
 
         <figure class="gallery__item reveal">
@@ -158,7 +159,7 @@
             <source type="image/webp" srcset="../assets/img/bentley-continental-480.webp 480w, ../assets/img/bentley-continental-800.webp 800w, ../assets/img/bentley-continental-1200.webp 1200w" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 46vw, 94vw">
             <img src="../assets/img/bentley-continental-800.jpg" alt="Zilvergrijze Bentley Continental GT in de detailing studio na keramische coating" width="1206" height="1552" loading="lazy" decoding="async">
           </picture>
-          <figcaption>Bentley Continental GT — keramische coating</figcaption>
+          <figcaption data-en="Bentley Continental GT — ceramic coating">Bentley Continental GT — keramische coating</figcaption>
         </figure>
 
         <figure class="gallery__item reveal">
@@ -166,7 +167,7 @@
             <source type="image/webp" srcset="../assets/img/ram-trx-480.webp 480w, ../assets/img/ram-trx-800.webp 800w, ../assets/img/ram-trx-1152.webp 1152w" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 46vw, 94vw">
             <img src="../assets/img/ram-trx-800.jpg" alt="RAM TRX pick-up met JS Detail Studio kentekenplaat na detailing" width="1152" height="2048" loading="lazy" decoding="async">
           </picture>
-          <figcaption>RAM TRX — exterieur detailing</figcaption>
+          <figcaption data-en="RAM TRX — exterior detailing">RAM TRX — exterieur detailing</figcaption>
         </figure>
 
         <figure class="gallery__item reveal">
@@ -174,7 +175,7 @@
             <source type="image/webp" srcset="../assets/img/bmw-3-480.webp 480w, ../assets/img/bmw-3-800.webp 800w, ../assets/img/bmw-3-1184.webp 1184w" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 46vw, 94vw">
             <img src="../assets/img/bmw-3-800.jpg" alt="Blauwe BMW 3-serie M Sport met hoogglans lak na polijsten bij JS Detail Studio in IJmuiden" width="1184" height="2048" loading="lazy" decoding="async">
           </picture>
-          <figcaption>BMW 3-serie M Sport — polijsten &amp; coating</figcaption>
+          <figcaption data-en="BMW 3-serie M Sport — polishing &amp; coating">BMW 3-serie M Sport — polijsten &amp; coating</figcaption>
         </figure>
 
         <figure class="gallery__item reveal">
@@ -182,7 +183,7 @@
             <source type="image/webp" srcset="../assets/img/cupra-formentor-480.webp 480w, ../assets/img/cupra-formentor-800.webp 800w, ../assets/img/cupra-formentor-1197.webp 1197w" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 46vw, 94vw">
             <img src="../assets/img/cupra-formentor-800.jpg" alt="Zwarte Cupra Formentor na exterieur detailing met JS Detail Studio kentekenplaat" width="1197" height="2041" loading="lazy" decoding="async">
           </picture>
-          <figcaption>Cupra Formentor — exterieur detailing</figcaption>
+          <figcaption data-en="Cupra Formentor — exterior detailing">Cupra Formentor — exterieur detailing</figcaption>
         </figure>
 
         <figure class="gallery__item reveal">
@@ -190,7 +191,7 @@
             <source type="image/webp" srcset="../assets/img/mercedes-glc-480.webp 480w, ../assets/img/mercedes-glc-800.webp 800w, ../assets/img/mercedes-glc-1206.webp 1206w" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 46vw, 94vw">
             <img src="../assets/img/mercedes-glc-800.jpg" alt="Mat bruine Mercedes-AMG GLC Coupé na exterieur detailing bij JS Detail Studio in IJmuiden" width="1206" height="846" loading="lazy" decoding="async">
           </picture>
-          <figcaption>Mercedes GLC Coupé — exterieur detailing</figcaption>
+          <figcaption data-en="Mercedes GLC Coupé — exterior detailing">Mercedes GLC Coupé — exterieur detailing</figcaption>
         </figure>
 
         <figure class="gallery__item reveal">
@@ -198,7 +199,7 @@
             <source type="image/webp" srcset="../assets/img/golf-gti-480.webp 480w, ../assets/img/golf-gti-800.webp 800w, ../assets/img/golf-gti-1204.webp 1204w" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 46vw, 94vw">
             <img src="../assets/img/golf-gti-800.jpg" alt="Grijze Volkswagen Golf GTI na exterieur detailing met JS Detail Studio kentekenplaat" width="1204" height="2048" loading="lazy" decoding="async">
           </picture>
-          <figcaption>Volkswagen Golf GTI — exterieur detailing</figcaption>
+          <figcaption data-en="Volkswagen Golf GTI — exterior detailing">Volkswagen Golf GTI — exterieur detailing</figcaption>
         </figure>
 
         <figure class="gallery__item reveal">
@@ -206,7 +207,7 @@
             <source type="image/webp" srcset="../assets/img/golf-gte-480.webp 480w, ../assets/img/golf-gte-800.webp 800w, ../assets/img/golf-gte-1176.webp 1176w" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 46vw, 94vw">
             <img src="../assets/img/golf-gte-800.jpg" alt="Grijze Volkswagen Golf GTE achterzijde na exterieur detailing met JS Detail Studio kentekenplaat" width="1176" height="2048" loading="lazy" decoding="async">
           </picture>
-          <figcaption>Volkswagen Golf GTE — exterieur detailing</figcaption>
+          <figcaption data-en="Volkswagen Golf GTE — exterior detailing">Volkswagen Golf GTE — exterieur detailing</figcaption>
         </figure>
 
         <figure class="gallery__item reveal">
@@ -214,7 +215,7 @@
             <source type="image/webp" srcset="../assets/img/mazda-mx5-480.webp 480w, ../assets/img/mazda-mx5-800.webp 800w, ../assets/img/mazda-mx5-1206.webp 1206w" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 46vw, 94vw">
             <img src="../assets/img/mazda-mx5-800.jpg" alt="Blauwe Mazda MX-5 roadster met hoogglans lak na exterieur detailing bij JS Detail Studio" width="1206" height="2023" loading="lazy" decoding="async">
           </picture>
-          <figcaption>Mazda MX-5 — exterieur detailing</figcaption>
+          <figcaption data-en="Mazda MX-5 — exterior detailing">Mazda MX-5 — exterieur detailing</figcaption>
         </figure>
 
         <figure class="gallery__item reveal">
@@ -222,12 +223,12 @@
             <source type="image/webp" srcset="../assets/img/mazda-cx5-480.webp 480w, ../assets/img/mazda-cx5-800.webp 800w, ../assets/img/mazda-cx5-1206.webp 1206w" sizes="(min-width: 1000px) 30vw, (min-width: 640px) 46vw, 94vw">
             <img src="../assets/img/mazda-cx5-800.jpg" alt="Donkerblauwe Mazda CX-5 na exterieur detailing met JS Detail Studio kentekenplaat" width="1206" height="1497" loading="lazy" decoding="async">
           </picture>
-          <figcaption>Mazda CX-5 — exterieur detailing</figcaption>
+          <figcaption data-en="Mazda CX-5 — exterior detailing">Mazda CX-5 — exterieur detailing</figcaption>
         </figure>
       </div>
 
       <p class="gallery__more reveal">
-        <a class="link link--big" href="https://www.instagram.com/jsdetailstudio/" target="_blank" rel="noopener">Volg @jsdetailstudio op Instagram <span aria-hidden="true">&rarr;</span></a>
+        <a class="link link--big" href="https://www.instagram.com/jsdetailstudio/" target="_blank" rel="noopener" data-en='Follow @jsdetailstudio on Instagram <span aria-hidden="true">&rarr;</span>'>Volg @jsdetailstudio op Instagram <span aria-hidden="true">&rarr;</span></a>
       </p>
     </div>
   </section>
@@ -240,10 +241,10 @@
     </video>
     <div class="band__shade band__shade--deep" aria-hidden="true"></div>
     <div class="band__content container reveal">
-      <h2 class="band__title" id="cta-title">Jouw auto als volgende?</h2>
-      <p class="band__sub">Plan een afspraak — uitsluitend op afspraak, met volledige aandacht.</p>
+      <h2 class="band__title" id="cta-title" data-en="Your car next?">Jouw auto als volgende?</h2>
+      <p class="band__sub" data-en="Book an appointment — by appointment only, with full attention.">Plan een afspraak — uitsluitend op afspraak, met volledige aandacht.</p>
       <div class="hero__actions">
-        <a class="btn btn--primary" href="../contact/">Plan een afspraak</a>
+        <a class="btn btn--primary" href="../contact/" data-en="Book an appointment">Plan een afspraak</a>
       </div>
     </div>
   </section>
@@ -253,9 +254,9 @@
   <div class="container footer__inner">
     <img src="../assets/img/logo-circle-96.webp" alt="Logo van JS Detail Studio" width="56" height="56" loading="lazy" class="footer__logo">
     <nav class="footer__nav" aria-label="Footer">
-      <a href="../diensten/">Diensten</a>
-      <a href="./">Projecten</a>
-      <a href="../over-ons/">Over ons</a>
+      <a href="../diensten/" data-en="Services">Diensten</a>
+      <a href="./" data-en="Projects">Projecten</a>
+      <a href="../over-ons/" data-en="About">Over ons</a>
       <a href="../contact/">Contact</a>
     </nav>
     <div class="footer__social">
@@ -270,6 +271,6 @@
   </div>
 </footer>
 
-<script src="../js/main.js?v=10" defer></script>
+<script src="../js/main.js?v=11" defer></script>
 </body>
 </html>

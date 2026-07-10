@@ -28,7 +28,7 @@
 
   <link rel="preload" href="../assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../css/style.css?v=10">
+  <link rel="stylesheet" href="../css/style.css?v=11">
 
   <script type="application/ld+json">
   {
@@ -55,11 +55,12 @@
       <span class="brand__name">JS&nbsp;Detail&nbsp;Studio</span>
     </a>
     <nav class="nav" id="nav" aria-label="Hoofdmenu">
-      <a href="../diensten/">Diensten</a>
-      <a href="../projecten/">Projecten</a>
-      <a href="./" class="is-active" aria-current="page">Over ons</a>
+      <a href="../diensten/" data-en="Services">Diensten</a>
+      <a href="../projecten/" data-en="Projects">Projecten</a>
+      <a href="./" class="is-active" aria-current="page" data-en="About">Over ons</a>
       <a href="../contact/" class="btn btn--small btn--primary nav__cta">Contact</a>
     </nav>
+    <button class="lang-toggle" type="button" aria-label="Switch to English">EN</button>
     <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav" aria-label="Menu openen">
       <span></span><span></span>
     </button>
@@ -69,21 +70,21 @@
 <main>
   <section class="section page-hero">
     <div class="container">
-      <nav class="breadcrumb" aria-label="Kruimelpad"><a href="../">Home</a><span aria-hidden="true">/</span><span>Over ons</span></nav>
+      <nav class="breadcrumb" aria-label="Kruimelpad"><a href="../" data-en="Home">Home</a><span aria-hidden="true">/</span><span data-en="About">Over ons</span></nav>
       <header class="section__head">
-        <p class="eyebrow">03 &middot; Over ons</p>
-        <h1 class="section__title">Passie voor perfectie</h1>
+        <p class="eyebrow" data-en="03 &middot; About">03 &middot; Over ons</p>
+        <h1 class="section__title" data-en="Passion for perfection">Passie voor perfectie</h1>
       </header>
     </div>
   </section>
 
   <section class="statement" style="padding-top:0">
     <div class="container">
-      <p class="statement__text reveal">Wij behandelen elke auto <em>alsof het onze eigen is</em> — van dagelijkse auto tot luxe wagen.</p>
+      <p class="statement__text reveal" data-en="We treat every car <em>as if it were our own</em> — from everyday cars to luxury rides.">Wij behandelen elke auto <em>alsof het onze eigen is</em> — van dagelijkse auto tot luxe wagen.</p>
       <ul class="statement__usps reveal">
-        <li>100% handwerk</li>
-        <li>Premium producten</li>
-        <li>Uitsluitend op afspraak</li>
+        <li data-en="100% handwork">100% handwerk</li>
+        <li data-en="Premium products">Premium producten</li>
+        <li data-en="By appointment only">Uitsluitend op afspraak</li>
       </ul>
     </div>
   </section>
@@ -98,18 +99,17 @@
       </div>
       <div class="about__body">
         <header class="section__head reveal">
-          <p class="eyebrow">Het verhaal</p>
-          <h2 class="section__title">Van passie naar studio</h2>
+          <p class="eyebrow" data-en="The story">Het verhaal</p>
+          <h2 class="section__title" data-en="From passion to studio">Van passie naar studio</h2>
         </header>
         <div class="about__text reveal">
-          <!-- TODO: placeholder-tekst, later vervangen door eigen verhaal -->
-          <p>JS Detail Studio is een onafhankelijke auto detailing studio in IJmuiden. Wat begon als een passie voor glanzende lak groeide uit tot een studio waar liefhebbers uit heel Kennemerland hun auto met een gerust hart achterlaten.</p>
-          <p>Geen lopende band, geen haastwerk: elke auto krijgt de tijd en aandacht die hij verdient. Van een grondige interieurbeurt tot een volledige correctie met keramische coating.</p>
+          <p data-en="JS Detail Studio is an independent car detailing studio in IJmuiden. What began as a passion for glossy paintwork grew into a studio where enthusiasts from all over Kennemerland leave their car with peace of mind.">JS Detail Studio is een onafhankelijke auto detailing studio in IJmuiden. Wat begon als een passie voor glanzende lak groeide uit tot een studio waar liefhebbers uit heel Kennemerland hun auto met een gerust hart achterlaten.</p>
+          <p data-en="No assembly line, no rushing: every car gets the time and attention it deserves. From a thorough interior clean to a full correction with ceramic coating.">Geen lopende band, geen haastwerk: elke auto krijgt de tijd en aandacht die hij verdient. Van een grondige interieurbeurt tot een volledige correctie met keramische coating.</p>
         </div>
         <ul class="about__points reveal">
-          <li>Persoonlijke aanpak, één aanspreekpunt</li>
-          <li>Werken uitsluitend met bewezen premium producten</li>
-          <li>Ook voor boten, jetski&rsquo;s en motoren</li>
+          <li data-en="Personal approach, one point of contact">Persoonlijke aanpak, één aanspreekpunt</li>
+          <li data-en="We work exclusively with proven premium products">Werken uitsluitend met bewezen premium producten</li>
+          <li data-en="Also for boats, jet skis and motorcycles">Ook voor boten, jetski&rsquo;s en motoren</li>
         </ul>
       </div>
     </div>
@@ -117,10 +117,10 @@
 
   <section class="section">
     <div class="container reveal" style="text-align:center">
-      <h2 class="section__title" style="margin-bottom:1.2rem">Zien wat we doen?</h2>
+      <h2 class="section__title" style="margin-bottom:1.2rem" data-en="See what we do?">Zien wat we doen?</h2>
       <div class="hero__actions">
-        <a class="btn btn--primary" href="../projecten/">Bekijk projecten</a>
-        <a class="btn btn--ghost" href="../contact/">Plan een afspraak</a>
+        <a class="btn btn--primary" href="../projecten/" data-en="View projects">Bekijk projecten</a>
+        <a class="btn btn--ghost" href="../contact/" data-en="Book an appointment">Plan een afspraak</a>
       </div>
     </div>
   </section>
@@ -130,9 +130,9 @@
   <div class="container footer__inner">
     <img src="../assets/img/logo-circle-96.webp" alt="Logo van JS Detail Studio" width="56" height="56" loading="lazy" class="footer__logo">
     <nav class="footer__nav" aria-label="Footer">
-      <a href="../diensten/">Diensten</a>
-      <a href="../projecten/">Projecten</a>
-      <a href="./">Over ons</a>
+      <a href="../diensten/" data-en="Services">Diensten</a>
+      <a href="../projecten/" data-en="Projects">Projecten</a>
+      <a href="./" data-en="About">Over ons</a>
       <a href="../contact/">Contact</a>
     </nav>
     <div class="footer__social">
@@ -147,6 +147,6 @@
   </div>
 </footer>
 
-<script src="../js/main.js?v=10" defer></script>
+<script src="../js/main.js?v=11" defer></script>
 </body>
 </html>

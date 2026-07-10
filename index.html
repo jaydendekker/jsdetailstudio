@@ -37,7 +37,7 @@
   <link rel="preload" href="assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/video/hero-studio-detailing-poster.jpg" as="image" fetchpriority="high">
-  <link rel="stylesheet" href="css/style.css?v=10">
+  <link rel="stylesheet" href="css/style.css?v=11">
 
   <!-- Structured data: LocalBusiness / AutoRepair -->
   <script type="application/ld+json">
@@ -88,11 +88,12 @@
       <span class="brand__name">JS&nbsp;Detail&nbsp;Studio</span>
     </a>
     <nav class="nav" id="nav" aria-label="Hoofdmenu">
-      <a href="diensten/">Diensten</a>
-      <a href="projecten/">Projecten</a>
-      <a href="over-ons/">Over ons</a>
+      <a href="diensten/" data-en="Services">Diensten</a>
+      <a href="projecten/" data-en="Projects">Projecten</a>
+      <a href="over-ons/" data-en="About">Over ons</a>
       <a href="contact/" class="btn btn--small btn--primary nav__cta">Contact</a>
     </nav>
+    <button class="lang-toggle" type="button" aria-label="Switch to English">EN</button>
     <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav" aria-label="Menu openen">
       <span></span><span></span>
     </button>
@@ -116,11 +117,11 @@
            sizes="(min-width: 700px) 176px, 132px"
            alt="Logo van JS Detail Studio" width="320" height="320" fetchpriority="high">
       <p class="hero__eyebrow">Detailing studio &middot; IJmuiden</p>
-      <h1 class="hero__title">Auto detailing<br>op het hoogste niveau.</h1>
-      <p class="hero__sub">Interieur &amp; exterieur detailing, machinaal polijsten en keramische coating. <br class="br-desktop">Precisie &amp; perfectie — uitsluitend op afspraak.</p>
+      <h1 class="hero__title" data-en="Car detailing<br>at the highest level.">Auto detailing<br>op het hoogste niveau.</h1>
+      <p class="hero__sub" data-en='Interior &amp; exterior detailing, machine polishing and ceramic coating. <br class="br-desktop">Precision &amp; perfection — by appointment only.'>Interieur &amp; exterieur detailing, machinaal polijsten en keramische coating. <br class="br-desktop">Precisie &amp; perfectie — uitsluitend op afspraak.</p>
       <div class="hero__actions">
-        <a class="btn btn--primary" href="contact/">Plan een afspraak</a>
-        <a class="btn btn--ghost" href="projecten/">Bekijk projecten</a>
+        <a class="btn btn--primary" href="contact/" data-en="Book an appointment">Plan een afspraak</a>
+        <a class="btn btn--ghost" href="projecten/" data-en="View projects">Bekijk projecten</a>
       </div>
     </div>
 
@@ -140,43 +141,43 @@
             <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
             <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
           </svg>
-          Reviews op Google
+          <span data-en="Reviews on Google">Reviews op Google</span>
         </p>
         <h2 class="reviews__score" id="reviews-title">
           <span class="reviews__score-num">5,0</span>
           <span class="stars" aria-hidden="true">★★★★★</span>
-          <span class="reviews__count">uit 24 reviews</span>
+          <span class="reviews__count" data-en="from 24 reviews">uit 24 reviews</span>
         </h2>
       </header>
 
       <div class="reviews__grid">
         <figure class="review-card reveal">
           <p class="review-card__stars" aria-label="5 van 5 sterren">★★★★★</p>
-          <blockquote class="review-card__text">Echt super tevreden! Mijn auto is van binnen en buiten perfect schoongemaakt en mooi gepolijst. Ook het cabriodak, dat echt heel vies was, is weer helemaal schoon geworden. Je ziet dat er met aandacht gewerkt wordt. Daarnaast ook erg vriendelijk en professioneel. Zeker een aanrader!</blockquote>
+          <blockquote class="review-card__text" data-en="Really happy! My car was cleaned perfectly inside and out and beautifully polished. The convertible roof, which was really dirty, is completely clean again too. You can tell it's done with care. On top of that, very friendly and professional. Definitely recommended!">Echt super tevreden! Mijn auto is van binnen en buiten perfect schoongemaakt en mooi gepolijst. Ook het cabriodak, dat echt heel vies was, is weer helemaal schoon geworden. Je ziet dat er met aandacht gewerkt wordt. Daarnaast ook erg vriendelijk en professioneel. Zeker een aanrader!</blockquote>
           <figcaption class="review-card__author">
             <span class="review-card__avatar" style="background:#7e5a4f" aria-hidden="true">L</span>
             <span>
               <span class="review-card__name">Lynn Steijger</span><br>
-              <span class="review-card__meta">Google-review</span>
+              <span class="review-card__meta" data-en="Google review">Google-review</span>
             </span>
           </figcaption>
         </figure>
 
         <figure class="review-card reveal">
           <p class="review-card__stars" aria-label="5 van 5 sterren">★★★★★</p>
-          <blockquote class="review-card__text">Waterscooter in de glascoating laten zetten. Super aardige gast die zijn afspraken nakomt. Resultaat is verbluffend mooi — het water loopt er razendsnel af.</blockquote>
+          <blockquote class="review-card__text" data-en="Had my jet ski glass-coated. Really nice guy who keeps his appointments. The result is stunning — water runs off incredibly fast.">Waterscooter in de glascoating laten zetten. Super aardige gast die zijn afspraken nakomt. Resultaat is verbluffend mooi — het water loopt er razendsnel af.</blockquote>
           <figcaption class="review-card__author">
             <span class="review-card__avatar" style="background:#c2185b" aria-hidden="true">J</span>
             <span>
               <span class="review-card__name">John van Egmond</span><br>
-              <span class="review-card__meta">Google-review</span>
+              <span class="review-card__meta" data-en="Google review">Google-review</span>
             </span>
           </figcaption>
         </figure>
       </div>
 
       <p class="reviews__more">
-        <a class="link link--big" href="https://www.google.com/search?kgmid=/g/11nb7r6nzc" target="_blank" rel="noopener">Lees alle reviews op Google <span aria-hidden="true">&rarr;</span></a>
+        <a class="link link--big" href="https://www.google.com/search?kgmid=/g/11nb7r6nzc" target="_blank" rel="noopener" data-en='Read all reviews on Google <span aria-hidden="true">&rarr;</span>'>Lees alle reviews op Google <span aria-hidden="true">&rarr;</span></a>
       </p>
     </div>
   </section>
@@ -191,9 +192,9 @@
     <span class="chapter__carlabel" aria-hidden="true">Mercedes SLR McLaren</span>
     <a class="chapter__link" href="diensten/">
       <span class="chapter__nr">01</span>
-      <h2 class="chapter__title">Diensten</h2>
-      <p class="chapter__teaser reveal">Interieur &amp; exterieur detailing, machinaal polijsten en keramische coating — afgestemd op jouw auto, prijzen op aanvraag.</p>
-      <span class="chapter__cta">Bekijk alle pakketten
+      <h2 class="chapter__title" data-en="Services">Diensten</h2>
+      <p class="chapter__teaser reveal" data-en="Interior &amp; exterior detailing, machine polishing and ceramic coating — tailored to your car, prices on request.">Interieur &amp; exterieur detailing, machinaal polijsten en keramische coating — afgestemd op jouw auto, prijzen op aanvraag.</p>
+      <span class="chapter__cta"><span data-en="View all packages">Bekijk alle pakketten</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
       </span>
     </a>
@@ -209,9 +210,9 @@
     <span class="chapter__carlabel" aria-hidden="true">Bentley Continental GT</span>
     <a class="chapter__link" href="projecten/">
       <span class="chapter__nr">02</span>
-      <h2 class="chapter__title">Projecten</h2>
-      <p class="chapter__teaser reveal">Van dagelijkse auto tot luxe wagen: bekijk recente detailing-projecten uit onze studio in IJmuiden.</p>
-      <span class="chapter__cta">Open de galerij
+      <h2 class="chapter__title" data-en="Projects">Projecten</h2>
+      <p class="chapter__teaser reveal" data-en="From everyday cars to luxury rides: see recent detailing projects from our studio in IJmuiden.">Van dagelijkse auto tot luxe wagen: bekijk recente detailing-projecten uit onze studio in IJmuiden.</p>
+      <span class="chapter__cta"><span data-en="Open the gallery">Open de galerij</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
       </span>
     </a>
@@ -227,9 +228,9 @@
     <span class="chapter__carlabel" aria-hidden="true">Bentley interieur</span>
     <a class="chapter__link" href="over-ons/">
       <span class="chapter__nr">03</span>
-      <h2 class="chapter__title">Over ons</h2>
-      <p class="chapter__teaser reveal">Onafhankelijke detailing studio met passie voor perfectie — 100% handwerk, premium producten.</p>
-      <span class="chapter__cta">Lees ons verhaal
+      <h2 class="chapter__title" data-en="About">Over ons</h2>
+      <p class="chapter__teaser reveal" data-en="Independent detailing studio with a passion for perfection — 100% handwork, premium products.">Onafhankelijke detailing studio met passie voor perfectie — 100% handwerk, premium producten.</p>
+      <span class="chapter__cta"><span data-en="Read our story">Lees ons verhaal</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
       </span>
     </a>
@@ -246,8 +247,8 @@
     <a class="chapter__link" href="contact/">
       <span class="chapter__nr">04</span>
       <h2 class="chapter__title">Contact</h2>
-      <p class="chapter__teaser reveal">Uitsluitend op afspraak — stuur een appje of DM, je hebt snel antwoord.</p>
-      <span class="chapter__cta">Alle contactgegevens
+      <p class="chapter__teaser reveal" data-en="By appointment only — send a message or DM, you'll get a quick reply.">Uitsluitend op afspraak — stuur een appje of DM, je hebt snel antwoord.</p>
+      <span class="chapter__cta"><span data-en="All contact details">Alle contactgegevens</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
       </span>
     </a>
@@ -270,6 +271,6 @@
 
 </main>
 
-<script src="js/main.js?v=10" defer></script>
+<script src="js/main.js?v=11" defer></script>
 </body>
 </html>

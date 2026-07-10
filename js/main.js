@@ -4,6 +4,41 @@
 
   var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* ----- Taalwissel NL / EN (client-side, geen extern script) ----- */
+  var applyLang = function (l) {
+    document.documentElement.setAttribute("lang", l);
+    document.querySelectorAll("[data-en]").forEach(function (el) {
+      if (!el.hasAttribute("data-nl")) el.setAttribute("data-nl", el.innerHTML);
+      el.innerHTML = l === "en" ? el.getAttribute("data-en") : el.getAttribute("data-nl");
+    });
+    // ook vertaalbare attributen (placeholder/aria/alt) via data-en-<attr>
+    document.querySelectorAll("[data-en-attr]").forEach(function (el) {
+      var pairs = el.getAttribute("data-en-attr").split("|");
+      pairs.forEach(function (p) {
+        var i = p.indexOf(":");
+        if (i < 0) return;
+        var attr = p.slice(0, i), en = p.slice(i + 1);
+        var nlKey = "data-nl-" + attr;
+        if (!el.hasAttribute(nlKey)) el.setAttribute(nlKey, el.getAttribute(attr) || "");
+        el.setAttribute(attr, l === "en" ? en : el.getAttribute(nlKey));
+      });
+    });
+    document.querySelectorAll(".lang-toggle").forEach(function (b) {
+      b.textContent = l === "nl" ? "EN" : "NL";
+      b.setAttribute("aria-label", l === "nl" ? "Switch to English" : "Schakel naar Nederlands");
+    });
+    try { localStorage.setItem("jsds-lang", l); } catch (e) {}
+  };
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest ? e.target.closest(".lang-toggle") : null;
+    if (!b) return;
+    e.preventDefault();
+    applyLang(document.documentElement.getAttribute("lang") === "en" ? "nl" : "en");
+  });
+  var savedLang;
+  try { savedLang = localStorage.getItem("jsds-lang"); } catch (e) {}
+  if (savedLang === "en") applyLang("en");
+
   /* ----- Header: achtergrond na scrollen ----- */
   var header = document.querySelector(".site-header");
   var onScroll = function () {
