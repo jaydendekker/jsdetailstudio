@@ -786,6 +786,35 @@ ul { list-style: none; }
 .footer--inpanel { margin-top: auto; padding: 1.6rem 0; }
 .footer--inpanel .footer__meta { margin-top: 0; }
 
+/* ---------- Desktop (laptop): split-layout i.p.v. schermvullende foto ----------
+   Een staande foto schermvullend op een breed scherm snijdt ~50% van de hoogte
+   weg (te ingezoomd). Daarom: foto in de rechterhelft, tekst links op donker. */
+@media (min-width: 900px) {
+  .chapter--media { background: var(--bg-tint); }
+  .chapter--media .chapter__bg,
+  .chapter--media .chapter__bgvideo { left: 50%; }
+  .chapter--media .chapter__bg img { object-position: center; }
+  .chapter--media .chapter__shade {
+    left: 50%;
+    background:
+      linear-gradient(to right, var(--bg-tint) 0%, rgba(10, 10, 11, 0.2) 24%, transparent 54%),
+      linear-gradient(to bottom, rgba(10, 10, 11, 0.28), transparent 26%, transparent 80%, rgba(10, 10, 11, 0.34));
+  }
+  .chapter--media .chapter__link {
+    justify-content: center;
+    padding: 6rem 0;
+    padding-right: 52%;
+  }
+  .chapter--media .chapter__title { font-size: clamp(3rem, 5.2vw, 5rem); }
+  .chapter--media .chapter__nr,
+  .chapter--media .chapter__teaser,
+  .chapter--media .chapter__title,
+  .chapter--media .chapter__cta { text-shadow: none; }
+  /* Contact-paneel: knoppen + footer ook links naast de foto */
+  .chapter--contact .contact-quick,
+  .chapter--contact .footer--inpanel > .container { padding-right: 52%; }
+}
+
 /* ---------- Subpagina's ---------- */
 .page-hero { padding: clamp(7.5rem, 16vh, 11rem) 0 0; }
 .page-hero .section__intro { margin-bottom: 0; }
