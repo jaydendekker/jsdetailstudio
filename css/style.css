@@ -806,6 +806,18 @@ ul { list-style: none; }
    Een staande foto schermvullend op een breed scherm snijdt ~50% van de hoogte
    weg (te ingezoomd). Daarom: foto in de rechterhelft, tekst links op donker. */
 @media (min-width: 900px) {
+  /* Hero-video (staand) niet meer schermvullend inzoomen: toon 'm volledig in
+     het midden, met een subtiel vervaagde vulling van het poster-frame erachter. */
+  .hero__video { object-fit: contain; transform: none; }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -3;
+    background: #0a0a0b url("../assets/video/hero-studio-detailing-poster.jpg") center / cover;
+    filter: blur(34px) brightness(0.42);
+    transform: scale(1.15);
+  }
   .chapter--media { background: var(--bg-tint); }
   .chapter--media .chapter__bg,
   .chapter--media .chapter__bgvideo { left: 50%; }
