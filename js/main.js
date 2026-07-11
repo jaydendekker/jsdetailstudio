@@ -136,9 +136,24 @@
     video.dataset.loaded = "1";
     video.load();
   };
+  var fallbackToPoster = function (video) {
+    // Autoplay geweigerd (bv. energiebesparings-/databesparingsmodus op mobiel):
+    // verberg de video zodat er geen native play-knop verschijnt, en toon het
+    // poster-frame als stilstaande achtergrond op het omliggende paneel.
+    var poster = video.getAttribute("poster");
+    var host = video.closest(".hero, .band, .chapter") || video.parentElement;
+    if (poster && host) {
+      host.style.backgroundImage = "url('" + poster + "')";
+      host.style.backgroundSize = "cover";
+      host.style.backgroundPosition = "center";
+    }
+    video.style.opacity = "0";
+  };
   var tryPlay = function (video) {
     var p = video.play();
-    if (p && p.catch) p.catch(function () { /* autoplay geweigerd: poster blijft staan */ });
+    if (p && p.catch) {
+      p.catch(function () { fallbackToPoster(video); });
+    }
   };
 
   if (reducedMotion) {

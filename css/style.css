@@ -188,7 +188,10 @@ ul { list-style: none; }
   object-fit: cover;
   transform: scale(1.03);
   z-index: -2;
+  pointer-events: none;
 }
+/* achtergrond-video's zijn nooit bedienbaar (geen native controls bij tap) */
+.hero__video, .chapter__bgvideo, .band__video { pointer-events: none; }
 .hero__shade {
   position: absolute;
   top: 0;
