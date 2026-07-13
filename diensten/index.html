@@ -33,26 +33,50 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AutoRepair",
-    "name": "JS Detail Studio",
-    "url": "https://jsdetailstudio.com/",
-    "image": "https://jsdetailstudio.com/assets/img/og-image.jpg",
-    "logo": "https://jsdetailstudio.com/assets/icons/icon-512.png",
-    "telephone": "+31637583231",
-    "email": "info@jsdetailstudio.nl",
-    "priceRange": "€€",
-    "address": { "@type": "PostalAddress", "streetAddress": "Bronsstraat 15", "postalCode": "1976 BC", "addressLocality": "IJmuiden", "addressRegion": "Noord-Holland", "addressCountry": "NL" },
-    "sameAs": ["https://www.instagram.com/jsdetailstudio/"],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Detailing pakketten",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interieur detailing" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterieur detailing" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Machinaal polijsten" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Keramische coating" } }
-      ]
-    }
+    "@graph": [
+      {
+        "@type": "AutomotiveBusiness",
+        "@id": "https://jsdetailstudio.com/#business",
+        "name": "JS Detail Studio",
+        "alternateName": "JS Detail Studio IJmuiden",
+        "description": "Premium auto detailing studio in IJmuiden: interieur- en exterieur detailing, machinaal polijsten en keramische coating.",
+        "url": "https://jsdetailstudio.com/",
+        "image": "https://jsdetailstudio.com/assets/img/og-image.jpg",
+        "logo": "https://jsdetailstudio.com/assets/icons/icon-512.png",
+        "telephone": "+31637583231",
+        "email": "info@jsdetailstudio.nl",
+        "priceRange": "€€",
+        "address": { "@type": "PostalAddress", "streetAddress": "Bronsstraat 15", "postalCode": "1976 BC", "addressLocality": "IJmuiden", "addressRegion": "Noord-Holland", "addressCountry": "NL" },
+        "geo": { "@type": "GeoCoordinates", "latitude": 52.4540932, "longitude": 4.5870058 },
+        "areaServed": ["IJmuiden", "Velsen", "Santpoort", "Beverwijk", "Haarlem"],
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "17:00" }
+        ],
+        "sameAs": ["https://www.instagram.com/jsdetailstudio/", "https://www.google.com/search?kgmid=/g/11nb7r6nzc"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jsdetailstudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Diensten", "item": "https://jsdetailstudio.com/diensten/" }
+        ]
+      },
+      { "@type": "Service", "name": "Interieur detailing", "serviceType": "Interieur detailing", "provider": { "@id": "https://jsdetailstudio.com/#business" }, "areaServed": ["IJmuiden","Velsen","Santpoort","Beverwijk","Haarlem"], "url": "https://jsdetailstudio.com/diensten/interieur-detailing/" },
+      { "@type": "Service", "name": "Exterieur detailing", "serviceType": "Exterieur detailing", "provider": { "@id": "https://jsdetailstudio.com/#business" }, "areaServed": ["IJmuiden","Velsen","Santpoort","Beverwijk","Haarlem"], "url": "https://jsdetailstudio.com/diensten/exterieur-detailing/" },
+      { "@type": "Service", "name": "Machinaal polijsten", "serviceType": "Machinaal polijsten", "provider": { "@id": "https://jsdetailstudio.com/#business" }, "areaServed": ["IJmuiden","Velsen","Santpoort","Beverwijk","Haarlem"], "url": "https://jsdetailstudio.com/diensten/machinaal-polijsten/" },
+      { "@type": "Service", "name": "Keramische coating", "serviceType": "Keramische coating", "provider": { "@id": "https://jsdetailstudio.com/#business" }, "areaServed": ["IJmuiden","Velsen","Santpoort","Beverwijk","Haarlem"], "url": "https://jsdetailstudio.com/diensten/keramische-coating/" },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Wat kost een detailingbehandeling?", "acceptedAnswer": { "@type": "Answer", "text": "Elke behandeling stemmen we af op de staat, grootte en lak van je auto, dus we werken met een prijs op aanvraag in plaats van vaste tarieven. Stuur een paar foto's via WhatsApp en je krijgt snel een eerlijke, vrijblijvende inschatting." } },
+          { "@type": "Question", "name": "Hoe lang duurt het aanbrengen van een keramische coating?", "acceptedAnswer": { "@type": "Answer", "text": "Een keramische coating vraagt zorgvuldige voorbereiding: wassen, decontamineren en meestal machinaal polijsten voordat de coating erop gaat. Reken daarom op één tot twee dagen, afhankelijk van de staat van de lak en het gekozen pakket." } },
+          { "@type": "Question", "name": "Hoe lang gaat een keramische coating mee?", "acceptedAnswer": { "@type": "Answer", "text": "Afhankelijk van het product en het onderhoud gaat een professionele keramische coating meerdere jaren mee. Met de juiste nazorg — regelmatig handmatig wassen — behoud je de waterafstoting en diepe glans het langst." } },
+          { "@type": "Question", "name": "Wat is het verschil tussen polijsten en coaten?", "acceptedAnswer": { "@type": "Answer", "text": "Polijsten corrigeert de lak zelf: krassen, swirls en hologrammen worden weggewerkt voor een egale, diepe glans. Een coating beschermt die lak daarna met een harde, vuil- en waterafstotende laag. Polijsten herstelt, coaten behoudt — vaak combineren we beide." } },
+          { "@type": "Question", "name": "Moet ik mijn auto na een keramische coating nog wassen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, een gecoate auto blijft schoonmaken nodig hebben — maar het gaat een stuk makkelijker. Vuil hecht minder en spoelt sneller weg. Was met de hand met een pH-neutrale shampoo en vermijd borstelwasstraten om de coating te sparen." } },
+          { "@type": "Question", "name": "Doen jullie ook boten en jetski's?", "acceptedAnswer": { "@type": "Answer", "text": "Zeker. Naast auto's behandelen we ook boten, jetski's en motoren, bijvoorbeeld met een glascoating tegen aanslag en voor eenvoudiger onderhoud. Vraag gerust naar de mogelijkheden voor jouw vaartuig." } }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -83,7 +107,7 @@
       <nav class="breadcrumb" aria-label="Kruimelpad"><a href="../" data-en="Home">Home</a><span aria-hidden="true">/</span><span data-en="Services">Diensten</span></nav>
       <header class="section__head">
         <p class="eyebrow" data-en="01 &middot; Services">01 &middot; Diensten</p>
-        <h1 class="section__title" data-en="Our packages">Onze pakketten</h1>
+        <h1 class="section__title" data-en="Our detailing packages in IJmuiden">Onze detailing-pakketten in IJmuiden</h1>
         <p class="section__intro" data-en="Every treatment is tailored to the condition and paint of your car. All prices on request — send a message for a no-obligation quote.">Elke behandeling wordt afgestemd op de staat en de lak van jouw auto. Alle prijzen op aanvraag — stuur een appje voor een vrijblijvende inschatting.</p>
       </header>
     </div>
@@ -94,25 +118,25 @@
       <div class="services">
         <article class="service reveal">
           <span class="service__nr">01</span>
-          <h2 class="service__title" data-en="Interior detailing">Interieur detailing</h2>
+          <h2 class="service__title"><a href="interieur-detailing/" data-en="Interior detailing">Interieur detailing</a></h2>
           <p class="service__text" data-en="Deep cleaning of upholstery, leather and plastics — down to the smallest seams. The interior looks and smells like new again.">Dieptereiniging van bekleding, leer en kunststoffen — tot in de kleinste naden. Het interieur ruikt en voelt weer als nieuw.</p>
           <a class="service__price" href="../contact/"><span data-en="Price on request">Prijs op aanvraag</span> <span aria-hidden="true">&rarr;</span></a>
         </article>
         <article class="service reveal">
           <span class="service__nr">02</span>
-          <h2 class="service__title" data-en="Exterior detailing">Exterieur detailing</h2>
+          <h2 class="service__title"><a href="exterieur-detailing/" data-en="Exterior detailing">Exterieur detailing</a></h2>
           <p class="service__text" data-en="Thorough hand wash, decontamination and protection. A deep, sharp shine without car-wash scratches.">Grondige handwas, decontaminatie en bescherming. Een diepe, strakke glans zonder wasstraatkrassen.</p>
           <a class="service__price" href="../contact/"><span data-en="Price on request">Prijs op aanvraag</span> <span aria-hidden="true">&rarr;</span></a>
         </article>
         <article class="service reveal">
           <span class="service__nr">03</span>
-          <h2 class="service__title" data-en="Machine polishing">Machinaal polijsten</h2>
+          <h2 class="service__title"><a href="machinaal-polijsten/" data-en="Machine polishing">Machinaal polijsten</a></h2>
           <p class="service__text" data-en="We remove scratches, swirls and holograms in several stages. The result: a true showroom finish.">Krassen, swirls en hologrammen verwijderen we in meerdere stappen. Het resultaat: een echte showroom-finish.</p>
           <a class="service__price" href="../contact/"><span data-en="Price on request">Prijs op aanvraag</span> <span aria-hidden="true">&rarr;</span></a>
         </article>
         <article class="service reveal">
           <span class="service__nr">04</span>
-          <h2 class="service__title" data-en="Ceramic coating">Keramische coating</h2>
+          <h2 class="service__title"><a href="keramische-coating/" data-en="Ceramic coating">Keramische coating</a></h2>
           <p class="service__text" data-en="Years of protection and deep gloss with a professional ceramic coating, applied in a dust-free studio.">Jarenlange bescherming en diepglans met een professionele keramische coating, aangebracht in een stofvrije studio.</p>
           <a class="service__price" href="../contact/"><span data-en="Price on request">Prijs op aanvraag</span> <span aria-hidden="true">&rarr;</span></a>
         </article>
@@ -125,6 +149,41 @@
           <li data-en="Glass coating &amp; windows">Glascoating &amp; ruiten</li>
           <li data-en="Boat &amp; jet ski detailing">Boot &amp; jetski detailing</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="container">
+      <header class="section__head">
+        <p class="eyebrow">Veelgestelde vragen</p>
+        <h2 class="section__title">Veelgestelde vragen over detailing</h2>
+      </header>
+      <div class="services">
+        <article class="service reveal">
+          <h3 class="service__title">Wat kost een detailingbehandeling?</h3>
+          <p class="service__text">Elke behandeling stemmen we af op de staat, grootte en lak van je auto, dus we werken met een prijs op aanvraag in plaats van vaste tarieven. Stuur een paar foto&rsquo;s via WhatsApp en je krijgt snel een eerlijke, vrijblijvende inschatting.</p>
+        </article>
+        <article class="service reveal">
+          <h3 class="service__title">Hoe lang duurt het aanbrengen van een keramische coating?</h3>
+          <p class="service__text">Een keramische coating vraagt zorgvuldige voorbereiding: wassen, decontamineren en meestal <a class="link" href="machinaal-polijsten/">machinaal polijsten</a> voordat de coating erop gaat. Reken daarom op &eacute;&eacute;n tot twee dagen, afhankelijk van de staat van de lak en het gekozen pakket.</p>
+        </article>
+        <article class="service reveal">
+          <h3 class="service__title">Hoe lang gaat een keramische coating mee?</h3>
+          <p class="service__text">Afhankelijk van het product en het onderhoud gaat een professionele <a class="link" href="keramische-coating/">keramische coating</a> meerdere jaren mee. Met de juiste nazorg &mdash; regelmatig handmatig wassen &mdash; behoud je de waterafstoting en diepe glans het langst.</p>
+        </article>
+        <article class="service reveal">
+          <h3 class="service__title">Wat is het verschil tussen polijsten en coaten?</h3>
+          <p class="service__text"><a class="link" href="machinaal-polijsten/">Polijsten</a> corrigeert de lak zelf: krassen, swirls en hologrammen worden weggewerkt voor een egale, diepe glans. Een <a class="link" href="keramische-coating/">coating</a> beschermt die lak daarna met een harde, vuil- en waterafstotende laag. Polijsten herstelt, coaten behoudt &mdash; vaak combineren we beide.</p>
+        </article>
+        <article class="service reveal">
+          <h3 class="service__title">Moet ik mijn auto na een keramische coating nog wassen?</h3>
+          <p class="service__text">Ja, een gecoate auto blijft schoonmaken nodig hebben &mdash; maar het gaat een stuk makkelijker. Vuil hecht minder en spoelt sneller weg. Was met de hand met een pH-neutrale shampoo en vermijd borstelwasstraten om de coating te sparen.</p>
+        </article>
+        <article class="service reveal">
+          <h3 class="service__title">Doen jullie ook boten en jetski&rsquo;s?</h3>
+          <p class="service__text">Zeker. Naast auto&rsquo;s behandelen we ook boten, jetski&rsquo;s en motoren, bijvoorbeeld met een glascoating tegen aanslag en voor eenvoudiger onderhoud. Vraag gerust naar de mogelijkheden voor jouw vaartuig.</p>
+        </article>
       </div>
     </div>
   </section>

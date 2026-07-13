@@ -39,11 +39,12 @@
   <link rel="preload" href="assets/video/hero-studio-detailing-poster.jpg" as="image" fetchpriority="high">
   <link rel="stylesheet" href="css/style.css?v=13">
 
-  <!-- Structured data: LocalBusiness / AutoRepair -->
+  <!-- Structured data: LocalBusiness (AutomotiveBusiness) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AutoRepair",
+    "@type": "AutomotiveBusiness",
+    "@id": "https://jsdetailstudio.com/#business",
     "name": "JS Detail Studio",
     "alternateName": "JS Detail Studio IJmuiden",
     "description": "Premium auto detailing studio in IJmuiden: interieur- en exterieur detailing, machinaal polijsten en keramische coating.",
@@ -61,32 +62,12 @@
       "addressRegion": "Noord-Holland",
       "addressCountry": "NL"
     },
-    "areaServed": ["IJmuiden", "Velsen", "Santpoort", "Beverwijk", "Haarlem", "Kennemerland"],
+    "geo": { "@type": "GeoCoordinates", "latitude": 52.4540932, "longitude": 4.5870058 },
+    "areaServed": ["IJmuiden", "Velsen", "Santpoort", "Beverwijk", "Haarlem"],
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "17:00" }
     ],
-    "sameAs": ["https://www.instagram.com/jsdetailstudio/"],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "24",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Lynn Steijger" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Echt super tevreden! Mijn auto is van binnen en buiten perfect schoongemaakt en mooi gepolijst. Ook het cabriodak, dat echt heel vies was, is weer helemaal schoon geworden. Je ziet dat er met aandacht gewerkt wordt. Daarnaast ook erg vriendelijk en professioneel. Zeker een aanrader!"
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "John van Egmond" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Waterscooter in de glascoating laten zetten. Super aardige gast die zijn afspraken nakomt. Resultaat is verbluffend mooi — het water loopt er razendsnel af."
-      }
-    ],
+    "sameAs": ["https://www.instagram.com/jsdetailstudio/", "https://www.google.com/search?kgmid=/g/11nb7r6nzc"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Detailing pakketten",
@@ -207,7 +188,7 @@
   <section class="chapter chapter--media" id="diensten">
     <picture class="chapter__bg" aria-hidden="true">
       <source type="image/webp" srcset="assets/img/mercedes-slr-480.webp 480w, assets/img/mercedes-slr-800.webp 800w, assets/img/mercedes-slr-1200.webp 1200w, assets/img/mercedes-slr-1600.webp 1600w" sizes="100vw">
-      <img src="assets/img/mercedes-slr-800.jpg" alt="" width="3840" height="5120" loading="lazy" decoding="async">
+      <img src="assets/img/mercedes-slr-800.jpg" alt="Zilvergrijze Mercedes SLR McLaren in de detailingstudio van JS Detail Studio in IJmuiden" width="3840" height="5120" loading="lazy" decoding="async">
     </picture>
     <div class="chapter__shade" aria-hidden="true"></div>
     <span class="chapter__carlabel" aria-hidden="true">Mercedes SLR McLaren</span>
@@ -225,7 +206,7 @@
   <section class="chapter chapter--media" id="werk">
     <picture class="chapter__bg" aria-hidden="true">
       <source type="image/webp" srcset="assets/img/bentley-gtc-480.webp 480w, assets/img/bentley-gtc-800.webp 800w, assets/img/bentley-gtc-1090.webp 1090w" sizes="100vw">
-      <img src="assets/img/bentley-gtc-800.jpg" alt="" width="1090" height="1600" loading="lazy" decoding="async">
+      <img src="assets/img/bentley-gtc-800.jpg" alt="Bentley Continental GT Convertible na exterieur detailing bij JS Detail Studio in IJmuiden" width="1090" height="1600" loading="lazy" decoding="async">
     </picture>
     <div class="chapter__shade" aria-hidden="true"></div>
     <span class="chapter__carlabel" aria-hidden="true">Bentley Continental GT</span>
@@ -243,7 +224,7 @@
   <section class="chapter chapter--media" id="over-ons">
     <picture class="chapter__bg" aria-hidden="true">
       <source type="image/webp" srcset="assets/img/bentley-interieur-480.webp 480w, assets/img/bentley-interieur-800.webp 800w, assets/img/bentley-interieur-1152.webp 1152w" sizes="100vw">
-      <img src="assets/img/bentley-interieur-800.jpg" alt="" width="1152" height="2048" loading="lazy" decoding="async">
+      <img src="assets/img/bentley-interieur-800.jpg" alt="Interieur van een Bentley Continental GT na interieur detailing bij JS Detail Studio in IJmuiden" width="1152" height="2048" loading="lazy" decoding="async">
     </picture>
     <div class="chapter__shade" aria-hidden="true"></div>
     <span class="chapter__carlabel" aria-hidden="true">Bentley interieur</span>
@@ -261,7 +242,7 @@
   <section class="chapter chapter--media chapter--contact" id="contact">
     <picture class="chapter__bg" aria-hidden="true">
       <source type="image/webp" srcset="assets/img/landrover-defender-480.webp 480w, assets/img/landrover-defender-800.webp 800w, assets/img/landrover-defender-1200.webp 1200w, assets/img/landrover-defender-1600.webp 1600w" sizes="100vw">
-      <img src="assets/img/landrover-defender-800.jpg" alt="" width="1206" height="1718" loading="lazy" decoding="async">
+      <img src="assets/img/landrover-defender-800.jpg" alt="Groene Land Rover Defender na exterieur detailing bij JS Detail Studio in IJmuiden" width="1206" height="1718" loading="lazy" decoding="async">
     </picture>
     <div class="chapter__shade" aria-hidden="true"></div>
     <span class="chapter__carlabel" aria-hidden="true">Land Rover Defender</span>

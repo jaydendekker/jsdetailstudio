@@ -33,16 +33,35 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AutoRepair",
-    "name": "JS Detail Studio",
-    "url": "https://jsdetailstudio.com/",
-    "image": "https://jsdetailstudio.com/assets/img/og-image.jpg",
-    "logo": "https://jsdetailstudio.com/assets/icons/icon-512.png",
-    "telephone": "+31637583231",
-    "email": "info@jsdetailstudio.nl",
-    "priceRange": "€€",
-    "address": { "@type": "PostalAddress", "streetAddress": "Bronsstraat 15", "postalCode": "1976 BC", "addressLocality": "IJmuiden", "addressRegion": "Noord-Holland", "addressCountry": "NL" },
-    "sameAs": ["https://www.instagram.com/jsdetailstudio/"]
+    "@graph": [
+      {
+        "@type": "AutomotiveBusiness",
+        "@id": "https://jsdetailstudio.com/#business",
+        "name": "JS Detail Studio",
+        "alternateName": "JS Detail Studio IJmuiden",
+        "description": "Premium auto detailing studio in IJmuiden: interieur- en exterieur detailing, machinaal polijsten en keramische coating.",
+        "url": "https://jsdetailstudio.com/",
+        "image": "https://jsdetailstudio.com/assets/img/og-image.jpg",
+        "logo": "https://jsdetailstudio.com/assets/icons/icon-512.png",
+        "telephone": "+31637583231",
+        "email": "info@jsdetailstudio.nl",
+        "priceRange": "€€",
+        "address": { "@type": "PostalAddress", "streetAddress": "Bronsstraat 15", "postalCode": "1976 BC", "addressLocality": "IJmuiden", "addressRegion": "Noord-Holland", "addressCountry": "NL" },
+        "geo": { "@type": "GeoCoordinates", "latitude": 52.4540932, "longitude": 4.5870058 },
+        "areaServed": ["IJmuiden", "Velsen", "Santpoort", "Beverwijk", "Haarlem"],
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "17:00" }
+        ],
+        "sameAs": ["https://www.instagram.com/jsdetailstudio/", "https://www.google.com/search?kgmid=/g/11nb7r6nzc"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jsdetailstudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Over ons", "item": "https://jsdetailstudio.com/over-ons/" }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -104,7 +123,7 @@
         </header>
         <div class="about__text reveal">
           <p data-en="JS Detail Studio is an independent car detailing studio in IJmuiden. What began as a passion for glossy paintwork grew into a studio where enthusiasts from all over Kennemerland leave their car with peace of mind.">JS Detail Studio is een onafhankelijke auto detailing studio in IJmuiden. Wat begon als een passie voor glanzende lak groeide uit tot een studio waar liefhebbers uit heel Kennemerland hun auto met een gerust hart achterlaten.</p>
-          <p data-en="No assembly line, no rushing: every car gets the time and attention it deserves. From a thorough interior clean to a full correction with ceramic coating.">Geen lopende band, geen haastwerk: elke auto krijgt de tijd en aandacht die hij verdient. Van een grondige interieurbeurt tot een volledige correctie met keramische coating.</p>
+          <p data-en='No assembly line, no rushing: every car gets the time and attention it deserves. From a thorough <a class="link" href="../diensten/interieur-detailing/">interior clean</a> to a full correction with <a class="link" href="../diensten/keramische-coating/">ceramic coating</a>.'>Geen lopende band, geen haastwerk: elke auto krijgt de tijd en aandacht die hij verdient. Van een grondige <a class="link" href="../diensten/interieur-detailing/">interieurbeurt</a> tot een volledige correctie met <a class="link" href="../diensten/keramische-coating/">keramische coating</a>.</p>
         </div>
         <ul class="about__points reveal">
           <li data-en="Personal approach, one point of contact">Persoonlijke aanpak, één aanspreekpunt</li>

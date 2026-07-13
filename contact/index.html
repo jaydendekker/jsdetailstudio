@@ -33,20 +33,35 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AutoRepair",
-    "name": "JS Detail Studio",
-    "url": "https://jsdetailstudio.com/",
-    "image": "https://jsdetailstudio.com/assets/img/og-image.jpg",
-    "logo": "https://jsdetailstudio.com/assets/icons/icon-512.png",
-    "telephone": "+31637583231",
-    "email": "info@jsdetailstudio.nl",
-    "priceRange": "€€",
-    "address": { "@type": "PostalAddress", "streetAddress": "Bronsstraat 15", "postalCode": "1976 BC", "addressLocality": "IJmuiden", "addressRegion": "Noord-Holland", "addressCountry": "NL" },
-    "areaServed": ["IJmuiden", "Velsen", "Santpoort", "Beverwijk", "Haarlem", "Kennemerland"],
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "17:00" }
-    ],
-    "sameAs": ["https://www.instagram.com/jsdetailstudio/"]
+    "@graph": [
+      {
+        "@type": "AutomotiveBusiness",
+        "@id": "https://jsdetailstudio.com/#business",
+        "name": "JS Detail Studio",
+        "alternateName": "JS Detail Studio IJmuiden",
+        "description": "Premium auto detailing studio in IJmuiden: interieur- en exterieur detailing, machinaal polijsten en keramische coating.",
+        "url": "https://jsdetailstudio.com/",
+        "image": "https://jsdetailstudio.com/assets/img/og-image.jpg",
+        "logo": "https://jsdetailstudio.com/assets/icons/icon-512.png",
+        "telephone": "+31637583231",
+        "email": "info@jsdetailstudio.nl",
+        "priceRange": "€€",
+        "address": { "@type": "PostalAddress", "streetAddress": "Bronsstraat 15", "postalCode": "1976 BC", "addressLocality": "IJmuiden", "addressRegion": "Noord-Holland", "addressCountry": "NL" },
+        "geo": { "@type": "GeoCoordinates", "latitude": 52.4540932, "longitude": 4.5870058 },
+        "areaServed": ["IJmuiden", "Velsen", "Santpoort", "Beverwijk", "Haarlem"],
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "17:00" }
+        ],
+        "sameAs": ["https://www.instagram.com/jsdetailstudio/", "https://www.google.com/search?kgmid=/g/11nb7r6nzc"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jsdetailstudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://jsdetailstudio.com/contact/" }
+        ]
+      }
+    ]
   }
   </script>
 </head>

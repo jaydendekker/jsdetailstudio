@@ -33,16 +33,35 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AutoRepair",
-    "name": "JS Detail Studio",
-    "url": "https://jsdetailstudio.com/",
-    "image": "https://jsdetailstudio.com/assets/img/og-image.jpg",
-    "logo": "https://jsdetailstudio.com/assets/icons/icon-512.png",
-    "telephone": "+31637583231",
-    "email": "info@jsdetailstudio.nl",
-    "priceRange": "€€",
-    "address": { "@type": "PostalAddress", "streetAddress": "Bronsstraat 15", "postalCode": "1976 BC", "addressLocality": "IJmuiden", "addressRegion": "Noord-Holland", "addressCountry": "NL" },
-    "sameAs": ["https://www.instagram.com/jsdetailstudio/"]
+    "@graph": [
+      {
+        "@type": "AutomotiveBusiness",
+        "@id": "https://jsdetailstudio.com/#business",
+        "name": "JS Detail Studio",
+        "alternateName": "JS Detail Studio IJmuiden",
+        "description": "Premium auto detailing studio in IJmuiden: interieur- en exterieur detailing, machinaal polijsten en keramische coating.",
+        "url": "https://jsdetailstudio.com/",
+        "image": "https://jsdetailstudio.com/assets/img/og-image.jpg",
+        "logo": "https://jsdetailstudio.com/assets/icons/icon-512.png",
+        "telephone": "+31637583231",
+        "email": "info@jsdetailstudio.nl",
+        "priceRange": "€€",
+        "address": { "@type": "PostalAddress", "streetAddress": "Bronsstraat 15", "postalCode": "1976 BC", "addressLocality": "IJmuiden", "addressRegion": "Noord-Holland", "addressCountry": "NL" },
+        "geo": { "@type": "GeoCoordinates", "latitude": 52.4540932, "longitude": 4.5870058 },
+        "areaServed": ["IJmuiden", "Velsen", "Santpoort", "Beverwijk", "Haarlem"],
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "17:00" }
+        ],
+        "sameAs": ["https://www.instagram.com/jsdetailstudio/", "https://www.google.com/search?kgmid=/g/11nb7r6nzc"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jsdetailstudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Projecten", "item": "https://jsdetailstudio.com/projecten/" }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -74,7 +93,7 @@
       <header class="section__head">
         <p class="eyebrow">02 &middot; Portfolio</p>
         <h1 class="section__title" data-en="Projects">Projecten</h1>
-        <p class="section__intro" data-en='A selection of detailing projects from the studio: polishing, ceramic coating and interior detailing. See more results and videos on <a class="link" href="https://www.instagram.com/jsdetailstudio/" target="_blank" rel="noopener">Instagram</a>.'>Een selectie detailing-projecten uit de studio: polijsten, keramische coating en interieur detailing. Meer resultaten en video&rsquo;s zie je op <a class="link" href="https://www.instagram.com/jsdetailstudio/" target="_blank" rel="noopener">Instagram</a>.</p>
+        <p class="section__intro" data-en='A selection of detailing projects from the studio: <a class="link" href="../diensten/machinaal-polijsten/">polishing</a>, <a class="link" href="../diensten/keramische-coating/">ceramic coating</a> and <a class="link" href="../diensten/interieur-detailing/">interior detailing</a>. See more results and videos on <a class="link" href="https://www.instagram.com/jsdetailstudio/" target="_blank" rel="noopener">Instagram</a>.'>Een selectie detailing-projecten uit de studio: <a class="link" href="../diensten/machinaal-polijsten/">polijsten</a>, <a class="link" href="../diensten/keramische-coating/">keramische coating</a> en <a class="link" href="../diensten/interieur-detailing/">interieur detailing</a>. Meer resultaten en video&rsquo;s zie je op <a class="link" href="https://www.instagram.com/jsdetailstudio/" target="_blank" rel="noopener">Instagram</a>.</p>
       </header>
     </div>
   </section>
