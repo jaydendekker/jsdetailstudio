@@ -36,8 +36,9 @@
   <!-- Performance -->
   <link rel="preload" href="assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/video/hero-studio-detailing-poster.jpg" as="image" fetchpriority="high">
-  <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="preload" as="image" media="(min-width: 900px)" imagesrcset="assets/img/hero-ferrari-1200.webp" fetchpriority="high">
+  <link rel="preload" as="image" media="(max-width: 899.98px)" imagesrcset="assets/img/hero-ferrari-portrait-800.webp" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css?v=14">
 
   <!-- Structured data: LocalBusiness (AutomotiveBusiness) -->
   <script type="application/ld+json">
@@ -106,11 +107,13 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero">
-    <video class="hero__video" autoplay muted loop playsinline preload="auto"
-           poster="assets/video/hero-studio-detailing-poster.jpg" width="464" height="832" aria-hidden="true" tabindex="-1">
-      <source src="assets/video/hero-studio-detailing.webm" type="video/webm">
-      <source src="assets/video/hero-studio-detailing.mp4" type="video/mp4">
-    </video>
+    <picture class="hero__photo">
+      <source media="(min-width: 900px)" type="image/webp"
+              srcset="assets/img/hero-ferrari-800.webp 800w, assets/img/hero-ferrari-1200.webp 1200w, assets/img/hero-ferrari-1600.webp 1600w" sizes="100vw">
+      <source type="image/webp"
+              srcset="assets/img/hero-ferrari-portrait-480.webp 480w, assets/img/hero-ferrari-portrait-800.webp 800w, assets/img/hero-ferrari-portrait-1170.webp 1170w" sizes="100vw">
+      <img src="assets/img/hero-ferrari-portrait-800.jpg" alt="Rode Ferrari Portofino met hoogglans lak na detailing in de studio van JS Detail Studio in IJmuiden" width="1170" height="2532" fetchpriority="high" decoding="async">
+    </picture>
     <div class="hero__shade" aria-hidden="true"></div>
 
     <div class="hero__content container">
