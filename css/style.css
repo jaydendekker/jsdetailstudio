@@ -817,7 +817,7 @@ ul { list-style: none; }
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     z-index: -3;
-    background: #0a0a0b url("../assets/video/hero-bmw-m4-poster.jpg") center / cover;
+    background: #0a0a0b url("../assets/video/hero-jaguar-ftype-poster.jpg") center / cover;
     filter: blur(34px) brightness(0.42);
     transform: scale(1.15);
   }
