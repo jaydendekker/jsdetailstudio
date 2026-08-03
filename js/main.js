@@ -86,19 +86,29 @@
     var target = document.getElementById(a.getAttribute("href").slice(1));
     if (!target) return;
     e.preventDefault();
-    if (history.pushState) history.pushState(null, "", a.getAttribute("href"));
+    // De pijl onder de hero is een scroll-affordance, geen deelbare ankerlink:
+    // laat die geen #reviews in de URL achter, anders opent de site daar later.
+    if (history.pushState && !a.classList.contains("hero__scroll")) {
+      history.pushState(null, "", a.getAttribute("href"));
+    }
     snapScrollTo(target);
   });
   var jumpToHash = function () {
     var t = location.hash && document.getElementById(location.hash.slice(1));
     if (t) snapScrollTo(t);
   };
-  if (usesSnap && location.hash) {
-    jumpToHash();
-    // Chrome herstelt de scrollpositie nogmaals ná load; daarna opnieuw springen
-    window.addEventListener("load", function () {
-      requestAnimationFrame(jumpToHash);
-    });
+  /* De snap-homepage hoort altijd bij de hero te openen. Zonder dit herstelt de
+     browser de vorige scrollpositie, of laat mandatory snap de pagina bij het
+     laden doorschieten naar het volgende paneel — je landt dan op de reviews. */
+  if (usesSnap) {
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    var settle = function (fn) {
+      fn();
+      // browsers corrigeren de scrollpositie nogmaals ná load
+      window.addEventListener("load", function () { requestAnimationFrame(fn); });
+    };
+    if (location.hash) settle(jumpToHash);
+    else settle(function () { window.scrollTo(0, 0); });
   }
 
   /* ----- Fade-in bij scrollen ----- */
