@@ -192,6 +192,17 @@ ul { list-style: none; }
 }
 /* achtergrond-video's zijn nooit bedienbaar (geen native controls bij tap) */
 .hero__video, .chapter__bgvideo, .band__video { pointer-events: none; }
+/* Hero-foto: staande compositie op smalle schermen, de foto zelf op desktop */
+.hero__photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+.hero__photo img { width: 100%; height: 100%; object-fit: cover; }
 .hero__shade {
   position: absolute;
   top: 0;
@@ -812,12 +823,13 @@ ul { list-style: none; }
   /* Hero-video (staand) niet meer schermvullend inzoomen: toon 'm volledig in
      het midden, met een subtiel vervaagde vulling van het poster-frame erachter. */
   .hero__video { object-fit: contain; transform: none; }
+  .hero__photo img { object-fit: contain; }
   .hero::before {
     content: "";
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     z-index: -3;
-    background: #0a0a0b url("../assets/video/hero-jaguar-ftype-poster.jpg") center / cover;
+    background: #0a0a0b url("../assets/img/hero-slr-800.webp") center / cover;
     filter: blur(34px) brightness(0.42);
     transform: scale(1.15);
   }
