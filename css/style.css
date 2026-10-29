@@ -823,16 +823,7 @@ ul { list-style: none; }
   /* Hero-video (staand) niet meer schermvullend inzoomen: toon 'm volledig in
      het midden, met een subtiel vervaagde vulling van het poster-frame erachter. */
   .hero__video { object-fit: contain; transform: none; }
-  .hero__photo img { object-fit: contain; }
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    z-index: -3;
-    background: #0a0a0b url("../assets/img/hero-slr-800.webp") center / cover;
-    filter: blur(34px) brightness(0.42);
-    transform: scale(1.15);
-  }
+  .hero__photo img { object-fit: cover; }
   .chapter--media { background: var(--bg-tint); }
   .chapter--media .chapter__bg,
   .chapter--media .chapter__bgvideo { left: 50%; }
